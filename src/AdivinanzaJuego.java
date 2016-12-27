@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class AdivinanzaJuego {
 	
-public static int INTENTOS = 5;
+	public static int INTENTOS = 5;
 	
 	public static int pedirNumero() {
 		int numero_introducido = 0;
@@ -33,21 +33,22 @@ public static int INTENTOS = 5;
 		int numero_aleatorio = (int) (100 * Math.random() + 1);
 		int contador = 0;
 		
+		boolean adivinado=false;
 		AdivinanzaJuego ejercicio = null;    
 		ejercicio = new AdivinanzaJuego();
 		
 		do {
 			System.out.println("Adivina el numero");
+			
 			numero_introducido = pedirNumero();
+			contador++;
 			if (numero_introducido == numero_aleatorio) {
 				System.out.println("Enhorabuena has acertado");
-				
+				adivinado=true;
 			} else if (numero_introducido < numero_aleatorio) {
 				System.out.println("El numero introducido es mayor");
-				contador++;
 			} else if (numero_introducido > numero_aleatorio) {
 				System.out.println("El numero introducido es menor");
-				contador++;
 			}
 		} while ((numero_introducido != numero_aleatorio) && (contador<INTENTOS));
 		
