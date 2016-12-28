@@ -1,7 +1,12 @@
-package ev.femxa.val;
+package ev.femx.caden;
 
 import java.util.Scanner;
-
+/**
+ * dado un array 5 posiciones y  un numero 
+ * hacer un metetodo para que indique que posicion esta en el arry de menor a mayor.
+ * @author Administrador
+ *
+ */
 public class EjercicioPedirOrdenar {
 
 	
@@ -25,11 +30,10 @@ public class EjercicioPedirOrdenar {
 		int contador=0;
 		int[] numero = new int[10];
 			
+		for (i = 0; i < numero.length; i++) {
 		System.out.println("Introduzca 10 numeros para ordenarlos :");
-			
-		for (i = 0; i < 10; i++) {
-	            System.out.print("numeros" + i + "=");
-				numero[i]=pedirNumero();
+		
+		numero[i]=pedirNumero();
 	           
 	            for (i = 0; i < 10; i++) {
 	               
@@ -66,10 +70,10 @@ public class EjercicioPedirOrdenar {
 						/     /|   | \  \  \_       | 'A R   |
 					   /   __/ |   |  L  L   \      K./ /    L
 					  /   |    |   4  I  I    |    E./ /   ,'
-					 J    \    I    L F  I    |    // / _,'
-			_________|     |   F    |J   F    |   //_/-'
-			\   __   |    /   J     |/  J     |  /="
-			\\  \_\  \__,' \  F     |   F     |
+					 J    \    I    L F  I |  |    // / _,'
+			_________|     |   F    |J   F |  |   //_/-'
+			\   __   |    /   J     |/  J  |   |  /="
+			\\  \_\  \__,' \  F     |   F  |_ _|
 			\\\_____________\/      F__/      F
 			 \\|    |_____/  (______/
 			  \/_____/
