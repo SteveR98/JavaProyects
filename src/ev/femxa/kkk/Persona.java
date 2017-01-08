@@ -37,22 +37,4 @@ public class Persona {
 		Nombre = nombre;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

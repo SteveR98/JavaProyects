@@ -1,8 +1,12 @@
 package ev.femxa.kkk;
-
+/**
+ * Clase que sirve para introducir un numero maximo de personas
+ * @author alvar_000
+ *
+ */
 public class PrincipalPersona {
 
-	public static final int NUM_PERSONAS=1;
+	public static final int NUM_PERSONAS=5;
 	
 	public static void main(String[] args) {
 		
@@ -12,9 +16,6 @@ public class PrincipalPersona {
 	int edad_aux =0;
 	
 	array_persona=new Persona [NUM_PERSONAS]; //Metemos cinco personas
-		
-	Persona persona1 =new Persona("Alex",27);
-	array_persona[0] = persona1;
 	
 	
 		for (int i = 0; i < NUM_PERSONAS; i++)
