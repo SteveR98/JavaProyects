@@ -31,14 +31,7 @@ public class PedirNombreEdad {
 	
 	
 	
-	public static void main(String[] args) 
-	{
-		
-		int edad=this.edad;
-		String nombre=this.Nombre;
-		
 	
-	}
 	
 	
 	
