@@ -1,6 +1,4 @@
-
-
-
+package femx.varios.basic;
 
 /**
  * @author alvar_000
@@ -9,10 +7,9 @@
  */
 public class MostrarINFO {
 
-	void mostrarPersonaPorPantalla (Persona persona) 
-	{
-		
-		//TODO mostrar datos de una persona 
+	void mostrarPersonaPorPantalla(Persona persona) {
+
+		// TODO mostrar datos de una persona
 		System.out.println(persona.nombre);
 	}
 }

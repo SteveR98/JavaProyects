@@ -1,6 +1,4 @@
-
-
-
+package femx.varios.basic;
 
 /**
  * @author alvar_000
@@ -8,13 +6,12 @@
  * @created 12-dic.-2016 17:53:41
  */
 public class PedirDatos {
-	
-	public static Persona pedirDatosPersona ()
-	{
+
+	public static Persona pedirDatosPersona() {
 		Persona persona = null;
-		
-		return persona ;
-		
-		//Pedir datos
-		}
+
+		return persona;
+
+		// Pedir datos
 	}
+}
