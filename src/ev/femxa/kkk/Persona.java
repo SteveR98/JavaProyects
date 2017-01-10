@@ -18,7 +18,7 @@ public class Persona {
 	 * Constructor usando parametros
 	 */
 	
-	public Persona (String nombre, int edad)
+	public Persona (String nombre, int edad)//Lo que recibo String... Y lo que devuelvo seria si es boolean String int....
 	{
 		this.edad=edad;
 		this.Nombre=nombre;
@@ -26,7 +26,7 @@ public class Persona {
 	
 	public int getEdad() {
 		return edad;
-	}
+	} 
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
@@ -36,5 +36,9 @@ public class Persona {
 	public void setNombre(String nombre) {
 		Nombre = nombre;
 	}
+	
+	
+	
+	
 	
 }

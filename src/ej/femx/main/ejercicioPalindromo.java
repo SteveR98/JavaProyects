@@ -14,7 +14,7 @@ public class ejercicioPalindromo{
 		int inicial =0;
 		int fin= (cadena.length()-1);
 		
-		while ((inicial==fin)&& (!palabraPalin))
+		while ((inicial<fin)&& (!palabraPalin))
 		{
 			if (cadena.charAt (inicial) == cadena.charAt(fin))
 			{
