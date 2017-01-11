@@ -11,7 +11,7 @@ public class BuscadorPosicion {
 	 * @param nombre recibe el nombre que va a devolver la propia posicion.
 	 * @return posicion que devuelve del nombre.
 	 */
-	public int buscarPersonaPos (String nombre)
+/*	public int buscarPersonaPos (String nombre)
 	{	int pos_persona=-5;
 		int pos =0;
 		Persona persona_busq =null;
@@ -37,16 +37,14 @@ public class BuscadorPosicion {
 	 * 
 	 * @param pos numero dado por usuario
 	 * @return persona que te devuelve segun la posicion.
-	 */
+	 
 	public Persona obtenerPersonaPos (int pos){
 		Persona persona_pedida =null ;
 		
 		persona_pedida = lista_personas [pos];
 		
 		return persona_pedida;
-	}
-	
-	
+	}*/
 	
 	
 	
