@@ -3,13 +3,7 @@ package edu.femx.fichero;
 import java.io.File;
 
 public class MainFicheros {
-	public boolean isHidden()
-	{
-		boolean oculto=true ;
-		
-		return false;
-		
-	}
+	
 
 	public static void main(String[] args)
 {	 
@@ -21,13 +15,16 @@ System.out.println("-----------------------------");
 
 if (f.exists()){
  File[] ficheros = f.listFiles();
- for (int x=0;x<ficheros.length;x++){
+ 
+ for (int x=0;x<ficheros.length;x++)
+ {
    if (ficheros[x].isHidden())
      System.out.println(ficheros[x].getName());
    }
-} else{
+}	 else
+	{
    System.out.println("No existe ese directorio");
-}		
+	}		
 	/*File file =null;
 	 file = new File ("file"); //("C:\\Users\\alvar_000\\git\\JavaProyects\\ficheros")
 	 boolean existe= file.exists();
