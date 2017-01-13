@@ -36,12 +36,11 @@ public static int pedirNumeros ()
 		char letra = caracteresDNI.charAt(resultado);
 				System.out.println("Su letra del DNI es :" +letra);	
 			
+
+		
 		}
 		
-		
-	}
-
-	
+}
 	
 	
 	
