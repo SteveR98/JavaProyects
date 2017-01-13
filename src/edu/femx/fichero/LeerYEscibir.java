@@ -59,6 +59,7 @@ public class LeerYEscibir {
 }
 	
 	public static void main(String[] args) {
+	
 		Scanner scanner =null;
 		scanner =new Scanner(System.in);
 		
@@ -74,18 +75,7 @@ public class LeerYEscibir {
 			String borrarFich = scanner.nextLine();
 	
 		 borrarFichero(borrarFich);
-		
-		
-		
-		
-		
-		
-	
-		
+			
 	}
-	
-	
-
-	
 	
 }
