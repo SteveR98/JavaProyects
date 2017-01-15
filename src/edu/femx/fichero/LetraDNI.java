@@ -36,8 +36,11 @@ public static int pedirNumeros ()
 		char letra = caracteresDNI.charAt(resultado);
 				System.out.println("Su letra del DNI es :" +letra);	
 			
-
-		
+				long segundosA = System.currentTimeMillis();
+				long segundosB = System.currentTimeMillis();
+				
+				double segundos = (segundosB-segundosA)/1000;
+				System.out.println("Tarda :" +segundos +"segundos");
 		}
 		
 }
