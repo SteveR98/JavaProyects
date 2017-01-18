@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 public class CheckedVSUnchecked {
 
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws FileNotFoundException
 	{
 		String cadena =null;
 	int arrayEnt []= new int [4];
@@ -33,12 +33,6 @@ public class CheckedVSUnchecked {
 	{
 		
 		System.out.println("Excepcion NULL ");
-		e.printStackTrace(); 
-	}
-	catch (FileNotFoundException e)
-	{
-		
-		System.out.println("Excepcion FileNot ");
 		e.printStackTrace(); 
 	}
 	catch (Exception e){
