@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Acceder {
 
 	public static void leerNombre(String nombre) throws IOException {
-		boolean salir =false;
+		
 		
 		File ficheroNombre = new File("C:\\Users\\alvar_000\\git\\JavaProyects\\USERS");
 
@@ -21,7 +21,8 @@ public class Acceder {
 
 		Scanner scanner = null;
 		scanner = new Scanner(System.in);
-
+		
+		System.out.println("PARA LOGIN IN" );
 		System.out.println("Introduce tu nombre: ");
 		nombre = scanner.nextLine();
 
@@ -34,7 +35,7 @@ public class Acceder {
 		} 
 		else {
 			System.out.println("No existe ese nombre ");
-			salir = true;
+			System.exit(0);
 		}
 		buffLeerNombre.close();
 		leerArchivo.close();
@@ -42,6 +43,7 @@ public class Acceder {
 
 	public static void leerContraseña(String contraseña) throws IOException {
 		boolean salir =false;
+		int contadorContra =0;
 		
 		File ficheroPassword = new File("C:\\Users\\alvar_000\\git\\JavaProyects\\PASSWORD");
 		BufferedReader buffLeerContraseña = null;
@@ -51,18 +53,50 @@ public class Acceder {
 		Scanner scanner = null;
 		scanner = new Scanner(System.in);
 
-		System.out.println("Introduce tu contraseña: ");
+		System.out.println("Introduce tu contraseña INTENTOS RESTANTES 3: ");
 		contraseña = scanner.nextLine();
 		
 	
 		buffLeerContraseña = new BufferedReader(leerArchivo);
 		String lineaContra = buffLeerContraseña.readLine();
 		
-		if (lineaContra.equals(contraseña)) {
+		if (lineaContra.equals(contraseña))
+		{
 			System.out.println("¡¡¡CORRECTO BIENVENIDO!!!");
-		} else {
+			System.exit(0);
+		}
+		
+		else {
+			
 			System.out.println("La contraseña es incorrecta ");
-			salir =true;
+			contadorContra ++;
+			
+			
+			System.out.println("Vuelva a introducir la contraseña INTENTOS RESTANTES 2");
+			contraseña = scanner.nextLine();
+			contadorContra ++;
+			
+			if (lineaContra.equals(contraseña))
+			{
+				System.out.println("¡¡¡CORRECTO BIENVENIDO!!!");
+				System.exit(0);
+			}
+			
+			System.out.println("Vuelva a introducir la contraseña INTENTOS RESTANTES 1");
+			contraseña = scanner.nextLine();
+			contadorContra++;
+			
+			if (lineaContra.equals(contraseña))
+			{
+				System.out.println("¡¡¡CORRECTO BIENVENIDO!!!");
+				System.exit(0);
+			}
+			
+			if (contadorContra >= 3 )
+			{	System.out.println("Has agotado los intentos");
+				System.exit(0);
+			}			
+		
 		}
 
 		buffLeerContraseña.close();

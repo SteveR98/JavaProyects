@@ -4,22 +4,70 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
+
 public static final int NUMEROCODIFICAR=4;
 
 
 public static void main(String[] args) throws IOException {
 	
+	boolean salir = false;
+	int numeroMenu = 0;
+	
+	Scanner scanner =null;
+	scanner = new Scanner(System.in);
+	
 	String nombre =null;
-	String contraseña =null;
+	String contraseña2 =null;
 	
-	Registro.escribirNombre(nombre);
-	Registro.escribirContraseña(contraseña);
+	do{	System.out.println("Introduce el valor del numero correspondiente: ");
+		
+		System.out.println("1-Registrarse");
+		System.out.println("2-Acceder");
+		System.out.println("3-Salir");
+		
+		numeroMenu = scanner.nextInt();
+		
+		if (numeroMenu ==1)
+		{
+			Registro.escribirNombre(nombre);
+			
+			Registro.escribirContraseña(contraseña2);
+		}
+		else if (numeroMenu == 2)
+		{
+			 Acceder.leerNombre(nombre);
+			
+			 Acceder.leerContraseña(contraseña2);
+		}
+
+		else if(numeroMenu >=3)
+		{
+			 salir =true ;
+			 System.out.println("Has Salido de la app");
+		}
+		
+	}while(!salir);
 	
-	Acceder.leerNombre(nombre);
-	Acceder.leerContraseña(contraseña);
-	}
 	
 }
+
+}		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 /*public static String codificado (String ficheroCodificar){
 
 	String mensajeCodificar="";
