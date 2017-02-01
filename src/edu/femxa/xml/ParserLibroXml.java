@@ -9,7 +9,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class ParserLibroXml extends DefaultHandler
-{	private List<Libro>libros;
+{	private List<Libro> lista_libros;
 	private Libro libro;
 	private String valorActual;
 	
@@ -19,7 +19,7 @@ public class ParserLibroXml extends DefaultHandler
 	// TODO Auto-generated method stub
 		//super.startDocument();
 		this.libro=new Libro();
-		libros =new ArrayList<>();
+		lista_libros =new ArrayList<>();
 }
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
@@ -55,7 +55,7 @@ public class ParserLibroXml extends DefaultHandler
 		}
 		else if(localName.equals("libro"))
 		{
-			libros.add(libro);
+			lista_libros.add(libro);
 
 		}
 		
@@ -63,7 +63,7 @@ public class ParserLibroXml extends DefaultHandler
 	@Override
 	public void endDocument() throws SAXException {
 	
-		 for (Libro libro :libros){
+		 for (Libro libro :lista_libros){
 			 System.out.println("INFO LIBRO");
 				System.out.println("TITULO= "+libro.getTitulo());
 				System.out.println("ISBN= "+libro.getIsbn());
